@@ -7,7 +7,7 @@ int RomanToInt(string);
 
 int main()
 {
-	string str = "II";
+	string str = "DCXXI";
 	cout << str << "=" << RomanToInt(str) << endl;
 
 	return 0;
@@ -55,7 +55,7 @@ int RomanToInt(string s)
 		}
 		else if (s[i] == 'X')
 		{
-			if (s[i+1] != 'X' && s[i + 1] != '\0')
+			if ((s[i + 1] == 'L' || s[i + 1] == 'C') && s[i + 1] != '\0')
 			{
 				switch (s[i+1])
 				{
@@ -76,7 +76,7 @@ int RomanToInt(string s)
 		}
 		else if (s[i] == 'C')
 		{
-			if (s[i + 1] != 'C' && s[i + 1] != '\0')
+			if ((s[i + 1] == 'D' || s[i + 1] == 'M') && s[i + 1] != '\0')
 			{
 				switch (s[i + 1])
 				{
